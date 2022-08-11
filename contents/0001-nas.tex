@@ -1,0 +1,52 @@
+\chapter{Generic NAS}
+
+
+
+\section{Introduction}
+
+NAS (network-attached storage) is a class of network-based file storing service or a class of hardware specialized for this kind of service.
+You may have certain reasons to avoid commercial special-purpose hardware solutions (e.g. Synology, QNAP)
+and all-in-one free/open-source solutions (e.g. TrueNAS).
+In this chapter, I will discuss how to configure a general-purpose GNU/Linux home server for this purpose.
+Personally, I prefer this way because I believe in the KISS philosophy (`keep it simple, stupid').
+
+People who need NAS may include video studios, digital ownership freaks, and science laboratories.
+By maintaining a NAS service in your home or studio, you will have a better file-sharing experience.
+
+
+
+\section{Space Allocation}
+
+You need to allocate a root directory. Suppose we will use `\texttt{/var/www/nasroot}' for this purpose.
+
+If your root filesystem is not large enough, you may make the directory a mount point (\texttt{man 8 mount})
+and mount another partition over there.
+
+If you have data security concerns, you may encrypt the entire external partition or encrypt the directory.
+
+To encrypt a partition, you need LUKS
+\footnote{LUKS: See \href{https://wiki.archlinux.org/title/Dm-crypt/Encrypting_a_non-root_file_system}{Arch Linux Wiki} for more details.}
+(\texttt{man 8 cryptsetup}).
+This approach lacks flexibility in several senses, but I prefer not to explain them here.
+
+To encrypt a directory, you need \href{https://github.com/vgough/encfs}{EncFS}
+\footnote{EncFS: A FUSE-based file encryption software developed by Valient Gough.} or something similar.
+This approach frees you from allocating a fixed amount of disk space before setting up the service.
+
+
+
+\section{Web Service}
+
+You need to install and setup \textbf{Nginx}.
+
+\section{Uploading}
+\section{Multimedia}
+\section{Internet Access}
+\subsection{Basic Authentication}
+\subsection{Temporary Sharing}
+\section{CDN Protection}
+\subsection{Basic Setup}
+\subsection{DDNS}
+\subsection{ISP Restrictions}
+\section{Extra Beautification}
+\subsection{Better Index}

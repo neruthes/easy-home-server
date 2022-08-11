@@ -1,0 +1,73 @@
+\documentclass[a4paper,12pt]{report}
+\usepackage[a4paper,textwidth=39em,vmargin=25mm]{geometry}
+\usepackage{calc,tocloft,datetime2,listings,paralist,fontspec,tabu}
+\usepackage{graphicx,eso-pic}
+\usepackage[PunctStyle=plain,RubberPunctSkip=false,CJKglue=\hskip 0pt,CJKecglue=\hskip 4pt plus 20pt]{xeCJK}
+\usepackage{xeCJKfntef}
+\usepackage[hidelinks]{hyperref}
+
+\setmainfont{Nimbus Roman}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{8pt}
+\linespread{1.1}
+
+\frenchspacing
+
+
+\title{Easy Home Server}
+\author{Neruthes}
+\date{Version \today}
+
+\begin{document}
+\newgeometry{a4paper,textwidth=39em,bmargin=25mm,tmargin=70mm}
+
+\begin{titlepage}
+    \center
+    \huge Easy Home Server\par\vskip 25pt
+    \normalsize Neruthes\par\vskip 15pt
+    \normalsize \today\par\vskip 15pt
+    \vfill
+    \small
+    You may get the source code of this publication at\\
+    \href{https://github.com/neruthes/easy-home-server}{https://github.com/neruthes/easy-home-server}\par
+    Licensed under \href{https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en\_US}{CC BY-NC-SA 4.0}
+\end{titlepage}
+\restoregeometry
+
+
+
+
+
+
+
+\chapter*{Preface}
+
+I intend to develop a manual on home server management,
+for various purposes including NAS (network-attached storage) and OSS (object storage service).
+The setups documented in this manual are derived from my personal setup.
+I wish these techniques will empower your home server as well.
+
+When you read this manual, you should at least have entry-level GNU/Linux operation skills,
+like installing software packages, managing services, and using CLI.
+
+If you would like to have a word with me,
+you may create an issue at the GitHub repo page of this project:
+\href{https://github.com/neruthes/easy-home-server}{https://github.com/neruthes/easy-home-server}.
+Feedbacks are appreciated.
+
+
+
+
+
+% \setcounter{tocdepth}{1}
+\clearpage
+\tableofcontents
+\clearpage
+
+
+
+
+
+\input{./contents.tex}
+\end{document}
